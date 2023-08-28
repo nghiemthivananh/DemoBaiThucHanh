@@ -4,37 +4,52 @@
 <head>
     <title>Đây là tiêu đề vào của trang web</title>
     <style>
-        table, th, td {
-            border: 1px solid pink;/*đường viền*/
-            border-collapse: collapse;/*đường viền thu gọn*/
-            border-radius: 10px;/*đường viền góc tròn*/
-            border-style: dotted;/*thiết lập đường viền*/
-            border-color: #96D4D4;/*màu viền*/
-        }
-        th, td {
-  background-color: #96D4D4;/*đường viền vô hình*/
-        }
-    </style>
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+</style>
 </head>
 <body>
     <h1>]Nghiêm Thị VâN Anh -MSV: 2021050078</h1>
-    <table style="width:100%">
-            <tr>
-              <th>Họ</th>
-              <th>Tên</th>
-              <th>Tuổi</th>
-            </tr>
-            <tr>
-              <td>Nghiêm</td>
-              <td>Vân Anh</td>
-              <td>20</td>
-            </tr>
-            <tr>
-              <td>Jill</td>
-              <td>Eve</td>
-              <td>10</td>
-            </tr>
-          </table>
+    <ul style="list-style-type:disc;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <ol type="1">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <dl><!--Danh sách mô  tả-->
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
+
+    
  
 
 </body>
