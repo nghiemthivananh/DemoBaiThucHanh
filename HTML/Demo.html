@@ -5,23 +5,18 @@
   </head>
 <body>
     <h1>Nghiêm Thị Vân Anh- 2021050078</h1>
+<!--object xác định đối tượng nhúng trong tài liệu-->
+    <object width="100%" height="500px" data="snippet.html"></object>
 
-    <audio controls><!--tệp âm thanh-->
-      <source src="horse.ogg" type="audio/ogg">
-      <source src="horse.mp3" type="audio/mpeg">
-    </audio>
+    <object data="audi.jpeg"></object>
+    <!--nhúng hình ảnh-->
 
-    <audio controls autoplay><!--bắt đầu 1 tệp autoplay-->
-      <source src="horse.ogg" type="audio/ogg">
-      <source src="horse.mp3" type="audio/mpeg">
-    </audio>
+    <embed src="audi.jpeg"><!--Phần tử này <embed>được hỗ trợ trong tất cả các trình duyệt chính-->
 
-    <audio controls autoplay muted>
-      <source src="horse.ogg" type="audio/ogg">
-      <source src="horse.mp3" type="audio/mpeg">
-    </audio>
-    <!--Thêm mutedsau autoplayđể tệp âm thanh của bạn bắt đầu phát tự động (nhưng bị tắt tiếng):-->
+    <embed width="100%" height="500px" src="snippet.html">
+      <!--Phần tử này <embed>cũng có thể được sử dụng để đưa HTML vào HTML:
+      emned không có thẻ đóng-->
 
 
-</body>
+  </body>
 </html>
