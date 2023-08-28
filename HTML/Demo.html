@@ -3,26 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Nghiêm Thị Vân Anh - MSV 2021050078</title>
+  <style>
+    .all-browsers {
+      margin: 0;
+      padding: 5px;
+      background-color: lightgray;
+    }
+    
+    .all-browsers > h1, .browser {
+      margin: 10px;
+      padding: 5px;
+    }
+    
+    .browser {
+      background: white;
+    }
+    
+    .browser > h2, p {
+      margin: 4px;
+      font-size: 90%;
+    }
+
+
+    aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+    }
+</style>
 </head>
 <body>
-  <p>Save the document by pressing <kbd>Ctrl + S</kbd></p><!--xác định 1 số vban đầu vào bàn phím-->
- 
-  <p>Message from my computer:</p>
-  <p><samp>File not found.<br>Press F1 to continue</samp></p>
-  <!--phần tử samp xác định đầu ra mẫu-->
-  <h2>The code Element</h2>
-  <p>Programming code example:</p>
-<!--xác định 1 đoạn mã-->
-  <pre>
-    <code>
-    x = 5;
-    y = 6;
-    z = x + y;
-    </code>
-  </pre>
-  <!--xác định vban đc định sẵn-->
-  <p>Diện tích của 1 tam giác: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
-<!--xác định 1 biến trong lập trình hoặc trong biểu thức toán học-->
+  <section><!--xác định chươgn, giới thiệu, tin tức, ttin liên lạc-->
+    <h1>WWF</h1>
+    <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+  </section>
+
+  <article class="all-browsers">
+    <h1>Google Chrome</h1>
+    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+  </article>   
+  <article class="browser">
+    <h2>Google Chrome</h2>
+    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+  </article>
+  <article class="browser">
+    <h2>Mozilla Firefox</h2>
+    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+  
+    <footer>
+      <p>Author: Hege Refsnes</p>
+      <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+    </footer>
+
+    <nav> <!-- xác định 1 tập hơp các liên kết điều hướng-->
+      <a href="/html/">HTML</a> |
+      <a href="/css/">CSS</a> |
+      <a href="/js/">JavaScript</a> |
+      <a href="/jquery/">jQuery</a>
+    </nav>
+
+    <aside><!--hiển thị một số nội dung ngoài nôi dung được đặt trong đó-->
+      <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+    </aside>
+
+    <figure><!--nội dung độc lập: hình minh họa, sơ đồ , ảnh, danh sách mã-->
+      <img src="pic_trulli.jpg" alt="Trulli" style="width:100%">
+      <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+    </figure>
 </body>
 </html>
 
