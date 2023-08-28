@@ -2,39 +2,36 @@
 <html lang="vi">
 <html>
 <head>
+  <title>Nghiêm Thị Vân Anh - MSV 2021050078</title>
   <style>
-    .city {
-      background-color: tomato;
-      color: white;
-      border: 2px solid black;
-      margin: 20px;
-      padding: 20px;
-    }
-    .note {
-      font-size: 120%;
-      color: red;
-    }
-    </style>
+    #myHeader {
+        background-color: lightblue;
+        color: black;
+        padding: 40px;
+        text-align: center;
+        }
+  </style> 
 </head>
 <body>
-  <h1>NGHIÊM THỊ VÂN ANH -MSV : 2021050078</h1>
-  <div class="city">
-    <h2>London</h2>
-    <p>London is the capital of England.</p>
-  </div>
-  
-  <div class="city">
-    <h2>Paris</h2>
-    <p>Paris is the capital of France.</p>
-  </div>
-  
-  <div class="city">
-    <h2>Tokyo</h2>
-    <p>Tokyo is the capital of Japan.</p>
-  </div>
+     <h1 id="myHeader">My Header</h1><!-- h1 sẽ tạo kiểu #myHeader đc khai báo trong phần đầu -->
+      <!--thuộc tính id khai báo kiểu cụ thể theo phần đc trỏ--> 
+      <!--class khai báo được nhiều lần, id chỉ đc sử dụng 1 lần--> 
+    <p><a href="#C1">Jump to Chapter 1</a></p>
+<!--tạo bookmark với thuộc tính. Sau đó thêm liên kết dấu trang href="#C4"-->
+    <p><a href="#C4">Jump to Chapter 4</a></p>
+    <h2 id="C1">Chapter 1</h2>
+    <p>This chapter explains ba bla bla</p>
 
-  <h1>My <span class="note">Important</span> Heading</h1>
-  <p>This is some <span class="note">important</span> text.</p>
+     <h2>Chapter 2</h2>
+    <p>This chapter explains ba bla bla</p>
 
+    <h2>Chapter 3</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2 id="C4">Chapter 4</h2>
+    <p>This chapter explains ba bla bla</p>
+
+    <h2>Chapter 5</h2>
+    <p>This chapter explains ba bla bla</p>
 </body>
-</html>
+</html> 
