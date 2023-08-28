@@ -2,12 +2,31 @@
 <html lang="vi">
 <html>
 <head>
+  <meta charset="UTF-8"><!--bộ kí tự sử dụng-->
+  <meta name="description" content="Free Web tutorials"><!--xdinh công cụ tìm kiếm-->
+  <meta name="keywords" content="HTML, CSS, JavaScript"><!--mô tả trang web-->
+  <meta name="author" content="John Doe"><!--tác giả của trang-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--làm cho web trông đẹp hơn trên các thiết bị-->
+
   <title>Nghiêm Thị Vân Anh - MSV 2021050078</title> 
+  
+  <style> /*xác định thông tin kiểu cho trang HTML*/
+    body {background-color: powderblue;}
+    h1 {color: red;}
+    p {color: blue;}
+   /* <link rel="stylesheet" href="mystyle.css"> sử dụng liên kết đến các tệp bên ngoài*/
+  </style>
+ <script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    }
+    </script>
+    <base href="https://www.w3schools.com/" target="_blank"><!--chỉ định URL mặc định cho tất cả các lket trong 1trang -->
 </head>
 <body>
-  <img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain">
-  <!--đường dẫn tuyệt đối-->
-  <img src="/images/picture.jpg" alt="Mountain">
-  <!--đường dẫn tương đối-->
+  <h1>My Web Page</h1>
+  <p id="demo">A Paragraph</p>
+  <button type="button" onclick="myFunction()">Try it</button>
 </body>
 </html> 
