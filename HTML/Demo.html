@@ -4,37 +4,73 @@
     <title>Nghiêm Thị Vân Anh - MSV : 2021050078</title>
   </head>
 <body>
-<h1>Nghiêm Thị Vân Anh- 2021050078</h1>
-<h2>HTML Forms</h2><!--Tạo 1 forms-->
+    <h1>Nghiêm Thị Vân Anh- 2021050078</h1>
 
-<form action="/action_page.php" target="_blank"><!--hành động kết nối với trang .php-->
-  <label for="fname">First name:</label><br><!--nhãn-->
-  <input type="text" id="fname" name="fname" value="Họ"><br><!--kiểu text-->
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Tên"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+    <h2>HTML Forms</h2><!--Tạo 1 forms-->
 
-<p>Nếu click nút "Submit, the form-data sẽ chuyển đến file "/action_page.php".</p>
+    <form action="/action_page.php" target="_blank"><!--hành động kết nối với trang .php-->
+      <label for="fname">First name:</label><br><!--nhãn-->
+      <input type="text" id="fname" name="fname" value="Họ"><br><!--kiểu text-->
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Tên"><br><br>
+      <input type="submit" value="Submit">
+    </form> 
 
-<form action="/action_page.php" method="get">
-  <!--phương thức get dùng với dữ liệu k an toàn phương thức POST sử dụng ở biểu mẫu chứa thông tin cá nhân nhạy cảm-->
-    <input type="radio" id="html" name="fav_language" value="HTML">
-    <label for="html">HTML</label><br>
-    <input type="radio" id="css" name="fav_language" value="CSS">
-    <label for="css">CSS</label><br>
-    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-    <label for="javascript">JavaScript</label>
-  </form> 
-  
-  <form action="/action_page.php"  novalidate>
-    <!--thuộc tính boolean chỉ định dữ liệu đầu vào sẽ không được xác thực khi gửi-->
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-    <label for="vehicle1"> I have a bike</label><br>
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-    <label for="vehicle2"> I have a car</label><br>
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-    <label for="vehicle3"> I have a boat</label>
-  </form>
+    <form action="/action_page.php">
+      <label for="cars">Choose a car:</label>
+      <select id="cars" name="cars" size="3" multiple><!--xác định danh sách thả xuống-->
+        <!--sdung size để hiển thị số lượng giá trị hiển thị-->
+        <!--multiple cho phép chọn nhiều giá trị-->
+        <option value="volvo">Volvo</option><!--xác định 1 tùy chọn-->
+        <option value="saab">Saab</option>
+        <option value="fiat" selected>Fiat</option><!--selected để xác định tùy chọn chọn trước-->
+        <option value="audi">Audi</option>
+      </select>
+      <input type="submit">
+    </form>
+
+    <form action="/action_page.php">
+      <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+    <!--text area (vùng văn bản) -->
+      <br><br>
+      <input type="submit">
+    </form>
+
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+    <!--hiển thị 1 ô để click chuyển sang tab mới-->
+
+    <form action="/action_page.php">
+      <fieldset><!-- dùng để nhóm dữ liệu lquan trong 1 bảng-->
+        <legend>Personalia:</legend><!--xác định chú thích cho fieldset-->
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+      </fieldset>
+    </form>
+
+    <form action="/action_page.php">
+      <input list="browsers">
+      <datalist id="browsers"><!-- datalist chỉ định danh sách các tùy chọn đc xdinh cho 1 input-->
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+      </datalist>
+    </form>
+
+    <form action="/action_page.php"
+      oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+      0
+      <input type="range"  id="a" name="a" value="50">
+      100 +
+      <input type="number" id="b" name="b" value="50">
+      =
+      <output name="x" for="a b"></output><!--biểu thị kết quả của 1 phép tính-->
+      <br><br>
+      <input type="submit">
+    </form>
 </body>
 </html>
