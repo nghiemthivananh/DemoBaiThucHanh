@@ -3,59 +3,40 @@
 <head>
 
     <Title>Nghiêm Thị Vân ANH - MSV 2021050078</Title> 
-    <script>
-        function clickCounter() {
-          if (typeof(Storage) !== "undefined") {
-            if (localStorage.clickcount) {
-              localStorage.clickcount = Number(localStorage.clickcount)+1;
-            } else {
-              localStorage.clickcount = 1;
-            }
-            document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
-          } else {
-            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-          }
-        }
-    </script>
-
-    <script>
-        function clickCounter() {
-          if (typeof(Storage) !== "undefined") {
-            if (sessionStorage.clickcount) {
-              sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-            } else {
-              sessionStorage.clickcount = 1;
-            }
-            document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
-          } else {
-            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
-          }
-        }
-    </script>
     
 <body>
-  <h1>Nghiêm Thị Vân Anh - 2021050078</h1>
-    <div id="result"></div>
+    <h1>Nghiêm Thị Vân Anh - 2021050078</h1>
+
+    <p>Count numbers: <output id="result"></output></p>
+
+    <button onclick="startWorker()">Start Worker</button> 
+    <button onclick="stopWorker()">Stop Worker</button>
+
+    <p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
 
     <script>
-     // Check browser support :ktra hỗ trợ trình duyệt
-     //Tạo một cặp tên/giá trị localStorage với name="lastname" và value="Smith
-    if (typeof(Storage) !== "undefined") {
-      // Store
-      localStorage.setItem("lastname", "Smith");
-      // Retrieve Lấy lại
-      //Truy xuất giá trị của "lastname" và chèn nó vào phần tử có id="result"
-      document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-    } else {
-      document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-    }
-    </script>
-    
-<!--đếm số lần người dùng đã nhấp vào nút. Trong mã này, chuỗi giá trị được chuyển đổi thành số để có thể tăng bộ đếm-->
-    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
-    <div id="result"></div>
-    <p>Click the button to see the counter increase.</p>
+    var w; // webwworker đếm số ở chế độ nền
 
+    function startWorker() {
+      if(typeof(Worker) !== "undefined") {
+        if(typeof(w) == "undefined") {
+          w = new Worker("demo_workers.js");
+        }
+        w.onmessage = function(event) {
+          document.getElementById("result").innerHTML = event.data;
+        };
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+      }
+    }
+
+    function stopWorker() { 
+      w.terminate();//chấm dứt 1 webworker
+      w = undefined;// tái sử dụng webworker
+    }
+    </script>   
+
+  
 
 
 </body>
