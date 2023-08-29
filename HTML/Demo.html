@@ -5,38 +5,24 @@
     <Title>Nghiêm Thị Vân ANH - MSV 2021050078</Title> 
     
 <body>
-    <h1>Nghiêm Thị Vân Anh - 2021050078</h1>
+      <h1>Nghiêm Thị Vân Anh - 2021050078</h1>
 
-    <p>Count numbers: <output id="result"></output></p>
+     <div id="result"></div>
 
-    <button onclick="startWorker()">Start Worker</button> 
-    <button onclick="stopWorker()">Stop Worker</button>
-
-    <p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
-
-    <script>
-    var w; // webwworker đếm số ở chế độ nền
-
-    function startWorker() {
-      if(typeof(Worker) !== "undefined") {
-        if(typeof(w) == "undefined") {
-          w = new Worker("demo_workers.js");
-        }
-        w.onmessage = function(event) {
-          document.getElementById("result").innerHTML = event.data;
+      <script>// nhận thông báo sự kiện do máy chủ gửi
+      if(typeof(EventSource) !== "undefined") {
+        var source = new EventSource("demo_sse.php");
+  //Tạo một đối tượng EventSource mới và chỉ định URL của trang gửi các bản cập nhật (trong ví dụ này là "demo_sse.php")
+        source.onmessage = function(event) {
+  //Mỗi lần nhận được bản cập nhật, sự kiện onmessage sẽ xảy ra
+          document.getElementById("result").innerHTML += event.data + "<br>";
+  //Khi xảy ra sự kiện onmessage, hãy đưa dữ liệu nhận được vào phần tử có id="result"
+   
         };
       } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
       }
-    }
-
-    function stopWorker() { 
-      w.terminate();//chấm dứt 1 webworker
-      w = undefined;// tái sử dụng webworker
-    }
-    </script>   
-
-  
+      </script>
 
 
 </body>
