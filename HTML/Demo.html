@@ -2,43 +2,61 @@
 <html>
 <head>
 
-    <Title>Nghiêm Thị Vân ANH - MSV 2021050078</Title>
-      <style>
-      #div1, #div2 {
-        float: left;
-        width: 100px;
-        height: 35px;
-        margin: 10px;
-        padding: 10px;
-        border: 1px solid black;
-      }
-      </style>
-      <script>
-      function allowDrop(ev) {
-        ev.preventDefault();
-      }
+    <Title>Nghiêm Thị Vân ANH - MSV 2021050078</Title> 
+    <script>
+        function clickCounter() {
+          if (typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+              localStorage.clickcount = Number(localStorage.clickcount)+1;
+            } else {
+              localStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+          } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+          }
+        }
+    </script>
 
-      function drag(ev) {
-        ev.dataTransfer.setData("text", ev.target.id);
-      }
-
-      function drop(ev) {
-        ev.preventDefault();
-        var data = ev.dataTransfer.getData("text");
-        ev.target.appendChild(document.getElementById(data));
-      }
-      </script>
-</head>
+    <script>
+        function clickCounter() {
+          if (typeof(Storage) !== "undefined") {
+            if (sessionStorage.clickcount) {
+              sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+            } else {
+              sessionStorage.clickcount = 1;
+            }
+            document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+          } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+          }
+        }
+    </script>
+    
 <body>
+  <h1>Nghiêm Thị Vân Anh - 2021050078</h1>
+    <div id="result"></div>
 
-      <h2>Drag and Drop</h2>
-      <p>Drag the image back and forth between the two div elements.</p>
+    <script>
+     // Check browser support :ktra hỗ trợ trình duyệt
+     //Tạo một cặp tên/giá trị localStorage với name="lastname" và value="Smith
+    if (typeof(Storage) !== "undefined") {
+      // Store
+      localStorage.setItem("lastname", "Smith");
+      // Retrieve Lấy lại
+      //Truy xuất giá trị của "lastname" và chèn nó vào phần tử có id="result"
+      document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+    } else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+    </script>
+    
+<!--đếm số lần người dùng đã nhấp vào nút. Trong mã này, chuỗi giá trị được chuyển đổi thành số để có thể tăng bộ đếm-->
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result"></div>
+    <p>Click the button to see the counter increase.</p>
 
-      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img src="img_w3slogo.gif" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
-      </div>
 
-      <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
 </body>
 </html>
