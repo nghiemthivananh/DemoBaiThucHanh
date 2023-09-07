@@ -4,21 +4,23 @@ public class Program {
     private static void Main(string[] args)
     {
 
-     float a =1;
-      if(a >=8.5){ 
-        System.Console.WriteLine("Hoc sinh dat loai gioi");
-      } else if(a >=6.5){
-        System.Console.WriteLine("Hoc sinh dat loai Kha");
-      } else if(a>=5){
-        System.Console.WriteLine("Hoc sinh loai Trung Binh");
-      }else if(a>=3.5){
-        System.Console.WriteLine("Hoc sinh loai Yeu");
-      }else {
-         System.Console.WriteLine("Hoc sinh loai Kem");
- 
-}
+    int day = 2;
+    switch(day){ 
+      case 1 : System.Console.WriteLine("Chu nhat"); break;
+      case 2 : System.Console.WriteLine("Thu 2"); break;
+      case 3 : System.Console.WriteLine("Thu 3"); break;
+      case 4 : System.Console.WriteLine("Thu 4"); break;
+      case 5 : System.Console.WriteLine("Thu 5"); break;
+      case 6 : System.Console.WriteLine("Thu 6"); break;
+      case 7 : System.Console.WriteLine("Thu 7"); break;
+      default :
+        System.Console.WriteLine("Khong phai ngay trong tuan");
+        break;
+    }  
+   
 }
 }
 
-  
+
+ 
  
