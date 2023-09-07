@@ -5,15 +5,18 @@ public class Program {
     {
 
     int a = 1;
-    while(a < 10)
+    do
     {
       System.Console.WriteLine("Vòng lặp thứ {0}",a);
-      a++;
+      a++;// tăng a lên 1 đơn vị để đảm bảo có lúc a>= 10; a>=10 thì vòng lặp kết thúcthúc
+
+    }while(a <10);
+   
    
 }
 }
 
-}
+
 
  
  
