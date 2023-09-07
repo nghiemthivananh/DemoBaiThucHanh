@@ -4,14 +4,15 @@ public class Program {
     private static void Main(string[] args)
     {
 
-      int MSV = 2021050078;
-      string HoTen = "Nghiem Thi Van Anh";
-    /*  float b = 2.1f;
-      double c = 3;
-      decimal d = 4m;
-      bool e = true;
-      bool f = false;
-      char KyTu = 'a';*/
+      const int namLamViec = 9;
+      const string HoTen = "Nghiem Thi Van Anh";
+      const int MSV = 2021050078;
+      const float a = 0.3f;
+      const double b = 4.5;
+      const decimal d = 3m;
+      const bool e = true;
+      const char KyTu = 'v';
+      Console.WriteLine("Nhanvien {0} + {1} nam kinh nghiem",HoTen,namLamViec);
     
       Console.WriteLine("Ma sinh vien là:{0}  ", +MSV);
       Console.WriteLine( HoTen);
