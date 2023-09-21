@@ -2,9 +2,9 @@
 using NewApp.Models;
 
 //Nghiem Thi Van Anh - MSV 2021050078
-Employee emp = new Employee();
-emp.NhapThongTin();
-emp.HienThi();
+Student std = new Student();
+std.NhapThongTin();
+std.HienThi();
 
  
  
