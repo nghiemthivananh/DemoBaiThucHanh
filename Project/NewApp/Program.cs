@@ -8,10 +8,15 @@ public class Program
     {
     
         Student std = new Student();
+
         string StudentID = "2021050078";
         string FullName = "Nghiem Thi Van Anh";
-        string Address = "Ha Noi";
-        std.HocSinh(StudentID,FullName,Address);    
+        string Address = " Ha Noi";
+        int a = 10;
+
+        System.Console.WriteLine("{0} - {1} - {2} - {3} diem",StudentID,FullName,Address, std.TinhDiem(a));
+
+
     }
 }
 
