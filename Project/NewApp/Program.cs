@@ -7,11 +7,11 @@ public class Program
 {
     public static void Main(string[]args)
     {
-      Employee emp = new Employee();
-      Employee emp2 = new Employee();
+      Fruit frt = new Fruit();
+      Fruit frt2 = new Fruit();
       
-      emp.NhapThongTin();
-      emp.HienThi();
+      frt.NhapThongTin();
+      frt.HienThi();
         
     }
 }

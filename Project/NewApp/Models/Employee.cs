@@ -24,4 +24,4 @@ namespace NewApp.Models
             System.Console.WriteLine("{0} - {1} - {2} - {3} ", EmployeeID, FullName, Address, ChucVu);
     }
     }
-}
+} 
