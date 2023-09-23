@@ -7,16 +7,16 @@ public class Program
     public static void Main(string[]args)
     {
     
-       Employee emp = new Employee();
+     
        Employee emp2 = new Employee();
 
-       emp2.EmployeeID = "2021050078";
-       emp2.FullName = "Nghiem Thi Van Anh";
-       emp2.Address = "HaNoi";
+       string EmployeeID = "2021050078";
+       string FullName = "Nghiem Thi Van Anh";
+       string Address = "HaNoi";
 
 
-       emp.HienThiTT();
-       emp2.HienThiTT();
+       emp2.NhanVien();
+     
 
     }
 }
