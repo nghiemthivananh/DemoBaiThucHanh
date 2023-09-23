@@ -7,15 +7,14 @@ public class Program
 {
     public static void Main(string[]args)
     {
-       SinhVien sv = new SinhVien();
-       SinhVien sv1 = new SinhVien();
-
-       sv.NhapThongTinSinhVien();
-       sv.HienThiThongTinSinhVien();
-
+      Student std = new Student();
+      Student std2 = new Student();
+      
+      std.NhapThongTin();
+      std.HienThi();
         
     }
 }
 
  
- 
+
