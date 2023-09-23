@@ -13,9 +13,9 @@ namespace NewApp.Models
     {//-----thuộc tính
         public string FullName {get; set; }
         public string Address{get; set; }
-        public int Age {get; set;}
+        public string MaSinhVien {get; set;}
 
-        public void EnterData()//------phương thức
+        public void NhapThongTin()//------phương thức
         /* public: phạm vi truy cập
          void: kiểu trả vè của phương thức
          MyMethod: Tên của phương thức
@@ -28,13 +28,13 @@ namespace NewApp.Models
             FullName = Console.ReadLine();
             System.Console.Write("Address = ");
             Address = Console.ReadLine();
-            System.Console.Write("Age = ");
-            Age = Convert.ToInt16(Console.ReadLine());
+            System.Console.Write("Ma Sinh Vien = ");
+            MaSinhVien = Console.ReadLine();
         }
 
-        public void Display()//-----phương thức
+        public void HienThi()//-----phương thức
         {
-            System.Console.WriteLine("{0} - {1} - {2} tuoi", FullName, Address, Age);
+            System.Console.WriteLine("{0} - {1} - {2} ", FullName, Address, MaSinhVien);
         }
 
     }
