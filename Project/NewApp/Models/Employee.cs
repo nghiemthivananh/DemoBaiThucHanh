@@ -2,26 +2,26 @@ namespace NewApp.Models
 {
     public class Employee
     {
-        public int MaNhanVien {get; set;}
-        public string TenNhanVien {get; set; }
-        public int Tuoi {get; set;}
-        public double Luong {get; set;}
+        public int EmployeeID {get; set;}
+        public string FullName {get; set; }
+        public string Address {get; set;}
+        public string ChucVu {get; set;}
 // Nghiem Thi Van Anh - 2021050078
     public void NhapThongTin()
     {
            System.Console.Write("Ma nhan vien = ");
-            MaNhanVien = Convert.ToInt16(Console.ReadLine());
+            EmployeeID = Convert.ToInt32(Console.ReadLine());
             System.Console.Write("Ten nhan vien = ");
-            TenNhanVien = Console.ReadLine();
-            System.Console.Write("Tuoi = ");
-            Tuoi = Convert.ToInt16(Console.ReadLine());
-            System.Console.Write("Luong = ");
-            Luong = Convert.ToDouble(Console.ReadLine());
+            FullName = Console.ReadLine();
+            System.Console.Write("Dia Chi = ");
+            Address = Console.ReadLine();
+            System.Console.Write("Chuc Vu = ");
+            ChucVu = Console.ReadLine();
     }
     public void HienThi()
 
     {
-            System.Console.WriteLine("{0} - {1} - {2} - {3} VND", MaNhanVien, TenNhanVien, Tuoi, Luong);
+            System.Console.WriteLine("{0} - {1} - {2} - {3} ", EmployeeID, FullName, Address, ChucVu);
     }
     }
 }
