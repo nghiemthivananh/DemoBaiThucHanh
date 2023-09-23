@@ -8,7 +8,10 @@ public class Program
     {
     
         Student std = new Student();
-        std.HienThi();    
+        string StudentID = "2021050078";
+        string FullName = "Nghiem Thi Van Anh";
+        string Address = "Ha Noi";
+        std.HocSinh(StudentID,FullName,Address);    
     }
 }
 

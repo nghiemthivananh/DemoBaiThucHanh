@@ -9,16 +9,12 @@ namespace NewApp.Models
 // Nghiem Thi Van Anh - 2021050078
     
            
-    public Student()
+    public void HocSinh(string StudentID, string FullName, string Address)
     {
-        StudentID = "20210500078";
-        FullName = "Nghiem Thi Van Anh";
-        Address = "Ha Noi";
-    }
-    public void HienThi()
 
-    {
             System.Console.WriteLine("{0} - {1} - {2} ", StudentID,FullName, Address);
+
     }
+  
     }
 } 
