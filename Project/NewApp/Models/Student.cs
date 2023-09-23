@@ -7,15 +7,13 @@ namespace NewApp.Models
         public string Address{get; set;}
      
 // Nghiem Thi Van Anh - 2021050078
-    public void NhapThongTin()
-    {
-           System.Console.Write("Student ID = ");
-            StudentID = Console.ReadLine();
-            System.Console.Write("FullName = ");
-            FullName = Console.ReadLine();
-            System.Console.Write("Address = ");
-            Address = Console.ReadLine();
+    
            
+    public Student()
+    {
+        StudentID = "20210500078";
+        FullName = "Nghiem Thi Van Anh";
+        Address = "Ha Noi";
     }
     public void HienThi()
 
