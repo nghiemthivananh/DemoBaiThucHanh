@@ -8,9 +8,9 @@ namespace NewApp.Models
      
 // Nghiem Thi Van Anh - 2021050078
 
-  public int TinhGiaBan(int KhoiLuong, int giaban)
+  public int TinhGiaBan(int KhoiLuong, int Cost)
   {
-        int GiaTien = KhoiLuong + giaban;
+        int GiaTien = KhoiLuong + Cost;
         return GiaTien;
   }
     }
