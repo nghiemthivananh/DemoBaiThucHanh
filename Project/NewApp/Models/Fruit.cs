@@ -7,16 +7,9 @@ namespace NewApp.Models
         public int KhoiLuong {get; set;}
      
 // Nghiem Thi Van Anh - 2021050078
-   public Fruit()
-    {
-        FruitName = "Dua Hau";
-        Cost = 120;
-        KhoiLuong = 3;
-    }
-    public void HienThi()
-
-    {
-            System.Console.WriteLine("{0} - {1}VND - {2} kg", FruitName,Cost , KhoiLuong);
-    }
+   public void HienThi(string FruitName,int Cost, int KhoiLuong)
+   {
+    System.Console.WriteLine("TenQua {0} - {1}vnd - {2}kg",FruitName,Cost,KhoiLuong);
+   }
     }
 }
