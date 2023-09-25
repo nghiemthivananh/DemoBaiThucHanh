@@ -8,14 +8,16 @@ public class Program
     {
     
      
-       Employee emp2 = new Employee();
+       Employee emp = new Employee();
 
        string EmployeeID = "2021050078";
        string FullName = "Nghiem Thi Van Anh";
        string Address = "HaNoi";
+       int c = 120000000;
+       
 
 
-       emp2.NhanVien();
+       System.Console.WriteLine("{0} - {1} - {2} - {3}",EmployeeID,FullName,Address,emp.TinhLuong(c));
      
 
     }
