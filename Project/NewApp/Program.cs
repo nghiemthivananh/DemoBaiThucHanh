@@ -9,13 +9,12 @@ public class Program
     {
     
      
-      Fruit frt = new Fruit();
-      string FruitName = "Dua Hau";
-      int Cost = 200;
-      int KhoiLuong = 3;
-
-      frt.HienThi(FruitName,Cost,KhoiLuong);
-      
+    
+     Fruit frt = new Fruit();
+     string FruitName = "Dua Hau";
+     int Cost = 30;
+     int KhoiLuong = 3;
+     System.Console.WriteLine("{0} - {1}vnd - {2}kg - {3}",FruitName,Cost,KhoiLuong,frt.TinhGiaBan(Cost,KhoiLuong));
 
 
       
