@@ -1,3 +1,5 @@
+using NewApp.Models;
+
 namespace NewApp.Models
 {
     public class Student : Person

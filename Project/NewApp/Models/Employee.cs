@@ -2,22 +2,26 @@ using NewApp.Models;
 
 namespace NewApp.Models
 {
-    public class Employee
+    public class Employee:Person
     {
         public string EmployeeID {get; set;}
-        public string FullName {get; set; }
-        public string Address {get; set; }
+      
 
      
        
 // Nghiem Thi Van Anh - 2021050078
     
-   
-    
-    public int TinhLuong(int LuongCoBan)
-    {
-        int Luong = LuongCoBan + 10000;
-        return Luong;
-    }
-    }
+       public void EnterData()
+        {
+            base.EnterData();
+            System.Console.WriteLine("EmpoyeeID =");
+            EmployeeID = Console.ReadLine();  
+        }
+
+        public void Display()
+        {
+           base.Display();
+           System.Console.WriteLine("Ma nhan vien: {0}", EmployeeID); 
+        }
+}
 }
