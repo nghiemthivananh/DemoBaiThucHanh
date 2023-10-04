@@ -8,9 +8,9 @@ public class Program
 {
   public static void Main(string[] args)
   {
-    Employee emp = new Employee();
-    emp.EnterData();
-    emp.Display();
+     Fruit frt = new Fruit();
+     frt.NhapThongTin();
+     frt.HienThi();
 
 
       }

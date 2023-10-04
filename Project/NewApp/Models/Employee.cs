@@ -17,7 +17,7 @@ namespace NewApp.Models
        public void EnterData()
         {
            
-           
+          
            
             System.Console.Write("FullName = "); 
             FullName = Console.ReadLine();

@@ -15,7 +15,14 @@ namespace NewApp.Models
           System.Console.WriteLine("Fruit Name =");
           FruitName =Console.ReadLine();
           System.Console.WriteLine("Cost = ");
-          Cost = Convert.ToInt32(Console.ReadLine());
+          
+          try{
+            Cost = Convert.ToInt32(Console.ReadLine());
+          }catch(Exception e)
+          {
+            Cost = 0;
+
+          }
           
         }
 
