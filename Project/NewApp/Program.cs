@@ -8,9 +8,9 @@ public class Program
 {
   public static void Main(string[] args)
   {
-     Fruit frt = new Fruit();
-     frt.NhapThongTin();
-     frt.HienThi();
+    Student std = new Student();
+    std.EnterData();
+    std.Display();
 
 
       }
