@@ -1,11 +1,14 @@
+using System.Runtime.Intrinsics.Arm;
 using NewApp.Models;
 
 namespace NewApp.Models
 {
-    public class Employee:Person
+    public class Employee
     {
-        public string EmployeeID {get; set;}
-      
+        public int EmployeeID {get; set;}
+        public string FullName {get; set; }
+        public string Address {get; set; }
+       
 
      
        
@@ -13,15 +16,33 @@ namespace NewApp.Models
     
        public void EnterData()
         {
-            base.EnterData();
-            System.Console.WriteLine("EmpoyeeID =");
-            EmployeeID = Console.ReadLine();  
+           
+           
+           
+            System.Console.Write("FullName = "); 
+            FullName = Console.ReadLine();
+            System.Console.Write("Address = ");
+            Address = Console.ReadLine();
+            System.Console.Write("EmpoyeeID =");
+         
+
+            try{
+                EmployeeID = Convert.ToInt32(Console.ReadLine());
+          
+                
+            }catch(Exception e)
+            {
+                EmployeeID = 0;
+       
+            }
+
+
         }
 
         public void Display()
         {
-           base.Display();
-           System.Console.WriteLine("Ma nhan vien: {0}", EmployeeID); 
+           
+           System.Console.WriteLine("Ma nhan vien: {0} - Ten nhan vien {1} - Dia Chi {2}", EmployeeID,FullName,Address); 
         }
 }
 }
