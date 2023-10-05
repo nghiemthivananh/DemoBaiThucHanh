@@ -17,19 +17,19 @@ internal class Program
         }
     }while (n<1);
     //Nghiem Thi Van Anh- 2021050078
-    Student [] A = new Student[n];
+    Fruit [] A = new Fruit[n];
     for(int i = 0; i < A.Length; i++ )
     {
          System.Console.WriteLine("A[{0}]:", i);
-         Student std = new Student();
-         std.EnterData();
-         A[i] = std;
+         Fruit frt = new Fruit();
+         frt.NhapThongTin();
+         A[i] = frt;
     }
 
-    // HIen thi cac phan tu trong array
+     //Nghiem Thi Van Anh- 2021050078
     for(int i = 0; i < A.Length; i++)
     {
-        System.Console.WriteLine(i + " FullName:  - " + A[i].FullName + " Address: - " + A[i].Address + " StudentID: - " + A[i].StudentID );
+        System.Console.WriteLine(i + " FruitName:  - " + A[i].FruitName + " Cost: - " + A[i].Cost + "VND");
     }
         }
     } 
