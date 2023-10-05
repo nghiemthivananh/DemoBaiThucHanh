@@ -10,26 +10,26 @@ internal class Program
         try{
             System.Console.Write("n = ");
             n = Convert.ToInt32(Console.ReadLine());
-    //Nghiem Thi Van Anh- 2021050078
+    
         }
         catch {
             n = 0;
         }
     }while (n<1);
-
-    Employee [] A = new Employee[n];
+    //Nghiem Thi Van Anh- 2021050078
+    Student [] A = new Student[n];
     for(int i = 0; i < A.Length; i++ )
     {
          System.Console.WriteLine("A[{0}]:", i);
-         Employee emp = new Employee();
-         emp.EnterData();
-         A[i] = emp;
+         Student std = new Student();
+         std.EnterData();
+         A[i] = std;
     }
 
     // HIen thi cac phan tu trong array
     for(int i = 0; i < A.Length; i++)
     {
-        System.Console.WriteLine(i + " FullName:  - " + A[i].FullName + " Address: - " + A[i].Address + " EmployeeID: - " + A[i].EmployeeID );
+        System.Console.WriteLine(i + " FullName:  - " + A[i].FullName + " Address: - " + A[i].Address + " StudentID: - " + A[i].StudentID );
     }
         }
     } 
