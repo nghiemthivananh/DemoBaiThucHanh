@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using DemoMVC.Models;
 
@@ -22,10 +22,6 @@ public class HomeController : Controller
     {
         return View();
 
-    }
-    public IActionResult Demo()
-    {
-            return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
