@@ -18,7 +18,7 @@ namespace DemoMVC.Controllers
             [HttpPost]
          public IActionResult Index(Employee emp)
             {
-                
+
                 int TinhLuong = (emp.LuongCB) *  (emp.HeSoLuong) +emp.PhuCap;
                 string str1 = "FullName: " + " "+ emp.FullName + " " + "Luong: " + TinhLuong + "VND";
                 ViewBag.KetQuaTinhLuong = str1;
