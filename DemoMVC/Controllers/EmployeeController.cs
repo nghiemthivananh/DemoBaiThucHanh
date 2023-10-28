@@ -18,10 +18,9 @@ namespace DemoMVC.Controllers
             [HttpPost]
          public IActionResult Index(Employee emp)
             {
-
-                int TinhLuong = (emp.LuongCB) *  (emp.HeSoLuong) +emp.PhuCap;
-                string str1 = "FullName: " + " "+ emp.FullName + " " + "Luong: " + TinhLuong + "VND";
-                ViewBag.KetQuaTinhLuong = str1;
+//Nghiem Thi Van Anh -2021050078
+                string str = emp.FullName + "_" + emp.EmployeeID + "_" + emp.SoDienThoai +"_"+ emp.Address; 
+                ViewBag.KetQua = str;
                 return View();
 //Nghiem Thi Van Anh -2021050078
             }
