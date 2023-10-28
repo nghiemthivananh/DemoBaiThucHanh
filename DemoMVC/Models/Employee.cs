@@ -4,12 +4,11 @@ using Microsoft.JSInterop.Infrastructure;
 namespace DemoMVC.Models
 {
 //Nghiem Thi Van Anh -2021050078
-    public class Employee 
+    public class Employee : Person
     {
-        public string FullName { get; set; }
+        
        public string EmployeeID  { get; set; }
-       public string SoDienThoai  { get; set; }
-       public string Address { get; set; }
-    //Nghiem Thi Van Anh -2021050078
+       public int Age  { get; set; }
+//Nghiem Thi Van Anh -2021050078
     }
 }
