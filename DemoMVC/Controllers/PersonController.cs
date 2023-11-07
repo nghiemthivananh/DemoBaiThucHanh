@@ -3,7 +3,7 @@ using DemoMVC.Data;
 using DemoMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+//Nghiem Thi Van Anh_ 2021050078
 namespace DemoMVC.Controllers
 {
     public class PersonController : Controller
@@ -80,7 +80,7 @@ namespace DemoMVC.Controllers
             }
             return View(person);
         }
-
+//Nghiem Thi Van Anh_ 2021050078
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null || _context.Person == null)
@@ -119,7 +119,7 @@ namespace DemoMVC.Controllers
         {
           return (_context.Person?.Any(e => e.PersonID == id)).GetValueOrDefault();
         }
-
+//Nghiem Thi Van Anh_ 2021050078
       
     }
 }
