@@ -4,7 +4,7 @@ using Microsoft.JSInterop.Infrastructure;
 namespace DemoMVC.Models
 {
 //Nghiem Thi Van Anh -2021050078
-    public class Employee : Person
+    public class Employee
     {
         
        public string EmployeeID  { get; set; }

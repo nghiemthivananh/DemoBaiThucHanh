@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DEMOMVC.Models;
 
 namespace DemoMVC.Models
 {
@@ -12,6 +13,7 @@ namespace DemoMVC.Models
         public string FullName { get; set; }
         public string Address { get; set; }
         public int Age { get; set; }
+
     }
 }
   //Nghiem Thi Van Anh - MSV : 2021050078

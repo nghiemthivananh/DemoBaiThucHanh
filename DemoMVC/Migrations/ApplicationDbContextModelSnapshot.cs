@@ -16,6 +16,20 @@ namespace DemoMVC.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
 
+            modelBuilder.Entity("DEMOMVC.Models.Faculty", b =>
+                {
+                    b.Property<string>("FacultyID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FacultyName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("FacultyID");
+
+                    b.ToTable("Faculty", (string)null);
+                });
+
             modelBuilder.Entity("DemoMVC.Models.Person", b =>
                 {
                     b.Property<string>("PersonID")
@@ -38,24 +52,41 @@ namespace DemoMVC.Migrations
 
                     b.HasKey("PersonID");
 
-                    b.ToTable("Person");
+                    b.ToTable("Person", (string)null);
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("Person");
 
                     b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("DemoMVC.Models.Employee", b =>
+            modelBuilder.Entity("DEMOMVC.Models.Student", b =>
                 {
                     b.HasBaseType("DemoMVC.Models.Person");
 
-                    b.Property<string>("EmployeeID")
+                    b.Property<string>("FacultyID")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.ToTable("Person");
+                    b.Property<string>("StudentID")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
-                    b.HasDiscriminator().HasValue("Employee");
+                    b.HasIndex("FacultyID");
+
+                    b.ToTable("Person", (string)null);
+
+                    b.HasDiscriminator().HasValue("Student");
+                });
+
+            modelBuilder.Entity("DEMOMVC.Models.Student", b =>
+                {
+                    b.HasOne("DEMOMVC.Models.Faculty", "Faculty")
+                        .WithMany()
+                        .HasForeignKey("FacultyID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Faculty");
                 });
 #pragma warning restore 612, 618
         }

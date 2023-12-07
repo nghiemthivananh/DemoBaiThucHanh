@@ -1,0 +1,9 @@
+D:\PTPMQL\DemoMVC\obj\Debug\net8.0\DemoMVC.csproj.AssemblyReference.cache
+D:\PTPMQL\DemoMVC\obj\Debug\net8.0\DemoMVC.GeneratedMSBuildEditorConfig.editorconfig
+D:\PTPMQL\DemoMVC\obj\Debug\net8.0\DemoMVC.AssemblyInfoInputs.cache
+D:\PTPMQL\DemoMVC\obj\Debug\net8.0\DemoMVC.AssemblyInfo.cs
+D:\PTPMQL\DemoMVC\obj\Debug\net8.0\DemoMVC.csproj.CoreCompileInputs.cache
+D:\PTPMQL\DemoMVC\obj\Debug\net8.0\DemoMVC.MvcApplicationPartsAssemblyInfo.cache
+D:\PTPMQL\DemoMVC\obj\Debug\net8.0\DemoMVC.RazorAssemblyInfo.cache
+D:\PTPMQL\DemoMVC\obj\Debug\net8.0\DemoMVC.RazorAssemblyInfo.cs
+D:\PTPMQL\DemoMVC\obj\Debug\net8.0\DemoMVC.sourcelink.json
