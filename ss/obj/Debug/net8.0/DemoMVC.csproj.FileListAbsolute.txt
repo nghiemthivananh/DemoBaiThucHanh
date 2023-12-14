@@ -850,3 +850,7 @@ D:\PTPMQL\ss\obj\Debug\net8.0\refint\DemoMVC.dll
 D:\PTPMQL\ss\obj\Debug\net8.0\DemoMVC.pdb
 D:\PTPMQL\ss\obj\Debug\net8.0\DemoMVC.genruntimeconfig.cache
 D:\PTPMQL\ss\obj\Debug\net8.0\ref\DemoMVC.dll
+D:\PTPMQL\ss\bin\Debug\net8.0\JetBrains.Annotations.dll
+D:\PTPMQL\ss\bin\Debug\net8.0\X.PagedList.dll
+D:\PTPMQL\ss\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
+D:\PTPMQL\ss\obj\Debug\net8.0\DemoMVC.MvcApplicationPartsAssemblyInfo.cs
